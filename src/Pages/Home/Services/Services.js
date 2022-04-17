@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Service from '../Service/Service';
+import './Servieces.css'
 // import images1 from '../../../images/'
 
 // const services = [
@@ -14,8 +16,16 @@ const Services = () => {
         .then(data=>setServices(data))
     },[])
     return (
-        <div>
-            <h2>this is services{services.length}</h2>
+        <div className='container'> 
+            <h1 className='text-primary text-center'>Our services</h1>
+           <div className='row'>
+           {
+              services.map(service=> <Service
+              key={service.id}
+              service={service}
+              ></Service>)  
+            }
+           </div>
         </div>
     );
 };
