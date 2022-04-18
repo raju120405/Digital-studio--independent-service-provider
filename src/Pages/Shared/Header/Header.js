@@ -8,7 +8,7 @@ const Header = () => {
 
       <Navbar collapseOnSelect expand="lg" sticky='top' bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand as={Link} to="/"><img height={30} src={logo} alt="" /></Navbar.Brand>
+          <Navbar.Brand as={Link} to="/home"><img height={30} src={logo} alt="" /><span className='ms-2'>Digital Studio</span></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto fs-4">
