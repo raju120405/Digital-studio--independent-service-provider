@@ -4,12 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 const Register = () => {
-    const [
-        createUserWithEmailAndPassword,
-        user,
-        loading,
-        error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    
 
     const nameRef= useRef('');
     const emailRef = useRef('');
@@ -24,7 +19,7 @@ const Register = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         
-        createUserWithEmailAndPassword(email,password);
+      
     }
     return (
         <div className='w-50 mx-auto'>
