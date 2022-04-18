@@ -1,10 +1,13 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import auth from '../../../../firebase.init';
+import app from '../../../../firebase.init';
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+
+
+
 const Register = () => {
-    
+    const auth = getAuth(app)
 
     const nameRef= useRef('');
     const emailRef = useRef('');
@@ -18,8 +21,15 @@ const Register = () => {
         const name= nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        
-      
+        console.log(email,password)
+      createUserWithEmailAndPassword(auth,email,password)
+      .then(result=>{
+          const user=result.user;
+          console.log(user);
+      })
+      .catch(error=>{
+          console.error(error)
+      })
     }
     return (
         <div className='w-50 mx-auto'>
