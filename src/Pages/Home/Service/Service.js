@@ -12,7 +12,7 @@ const Service = ({service}) => {
          
           <h6>Price:{price}</h6>
           <p className='card-text'>{description}</p>
-          <a href="#" className='btn btn-primary'>Book{name}</a>
+          <a href="/chackout" className='btn btn-primary'>Book{name}</a>
         </div>
       </div>
         </div>

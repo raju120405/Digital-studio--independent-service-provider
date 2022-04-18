@@ -3,7 +3,7 @@ import React from 'react';
 const Chackout = () => {
     return (
         <div>
-            <h2>Welcome To Chackout pages</h2>
+            <h2>Hey Welcome to chackout pages</h2>
         </div>
     );
 };
